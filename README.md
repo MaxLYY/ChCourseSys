@@ -35,9 +35,9 @@
                 jcb2.setSelected(false);
                 t2.setSelectedIndex(0);
                 massage.setText("");
-            }
-~~~
+            }~~~
 判断并打印
+
 ~~~
                 if(jrb1.isSelected()){
                     sex="男";
