@@ -24,7 +24,7 @@
                 String name=jtfName.getText();  
                 String num=jtfNum.getText();  
                 String sex;  
-
+~~~
       jbRest.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 jtfName.setText("");
@@ -36,8 +36,6 @@
                 t2.setSelectedIndex(0);
                 massage.setText("");
             }
-        });
-    }
 ~~~
 判断并打印
 ~~~
@@ -65,9 +63,17 @@
                 massage.setText(info.toString());                               
             }
         });
-
-  
-
+        ~~~
+异常处理
+~~~
+public void actionPerformed(ActionEvent e) {
+		File file = new File("d:\\Text.txt");  
+        try {  
+            file.createNewFile();  
+        } catch (IOException e1) {  
+            e1.printStackTrace();  
+        }  
+~~~
 运行截图：
 
 ## 四、实验心得
