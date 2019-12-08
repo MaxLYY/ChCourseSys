@@ -77,7 +77,7 @@ public void actionPerformed(ActionEvent e) {
         }  
 ~~~
 运行截图：
-！[](https://github.com/MaxLYY/ChCourseSys/blob/master/%E5%9B%BE%E7%89%871.png)
+![](https://github.com/MaxLYY/ChCourseSys/blob/master/%E5%9B%BE%E7%89%871.png)
 
 
 ## 四、实验心得
