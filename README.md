@@ -76,9 +76,10 @@ public void actionPerformed(ActionEvent e) {
             e1.printStackTrace();  
         }  
 ~~~
-运行截图：
-![](https://github.com/MaxLYY/ChCourseSys/blob/master/%E5%9B%BE%E7%89%871.png)
 
+### 运行截图：
+![](https://github.com/MaxLYY/ChCourseSys/blob/master/%E5%9B%BE%E7%89%872.png)
+![](https://github.com/MaxLYY/ChCourseSys/blob/master/%E5%9B%BE%E7%89%871.png)
 
 ## 四、实验心得
   本学期我们进行了五次Java 实验，经过这五次实验，我深切体会到投身实践的重要性。在本次实验中综合性的归纳了以往学过的知识点，整合已学知识编写本次实验程序。通过本次实验，我系统的再次了解和应用gui框体、事件监听、异常处理、文件保存与读取的逻辑编程。在本次实验的过程中，我认识到自己在实践中的不足，缺乏相应的知识与经验，对所学专业知识不能够很好的应用。所以在同班同学们的帮助下，熟悉并完成了代码编写，同时让我对程序设计有了成就感与兴趣感。希望通过这段时间的学习，能给以后的工作奠定坚持的基础。
