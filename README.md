@@ -15,91 +15,60 @@
 ## 三、实验过程  
 1.在选课系统的基础上添加GUI窗体  
 2.实现选课退课数据的基本文件输出和输入
-### 实验流程图：  
+### 核心代码： 
+添加点击事件  
+~~~
+  jbOk.addActionListener(new ActionListener() {             
+            public void actionPerformed(ActionEvent e) {  
+                StringBuilder info=new StringBuilder();  
+                String name=jtfName.getText();  
+                String num=jtfNum.getText();  
+                String sex;  
 
-
-
-
-### 核心代码：  
-  public void actionPerformed(ActionEvent e) {
-                StringBuilder info=new StringBuilder();
-                String name=jtfName.getText();
-                String num=jtfNum.getText();
-                String sex;
+      jbRest.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                jtfName.setText("");
+                jtfNum.setText("");
+                jrb1.setSelected(true);
+                jcb1.setSelected(false);
+                t1.setSelectedIndex(0);
+                jcb2.setSelected(false);
+                t2.setSelectedIndex(0);
+                massage.setText("");
+            }
+        });
+    }
+~~~
+判断并打印
+~~~
                 if(jrb1.isSelected()){
                     sex="男";
                 }else {
                     sex="女";
                 }
-                info.append(name+num+sex);
+                info.append("姓名："+name+"\n学号："+num+"\n性别："+sex+"\n所选课程:");
                 if(jcb1.isSelected()){
                     String c=jcb1.getText();
                     String t=t1.getSelectedItem().toString();
-                    info.append(":"+c+t);
+                    info.append(c+"\n授课老师:"+t);
                 }
                 if(jcb2.isSelected()){
                     String c=jcb2.getText();
                     String t=t2.getSelectedItem().toString();
-                    info.append(","+c+t);
+                    info.append(""+c+"\n授课老师:"+t);
                 }
                 if(jcb3.isSelected()){
                     String c=jcb3.getText();
                     String t=t3.getSelectedItem().toString();
-                    info.append(","+c+t);
+                    info.append(""+c+"\n授课老师:"+t);
                 }
                 massage.setText(info.toString());                               
             }
         });
-public void actionPerformed(ActionEvent e) {
-		File file = new File("d:\\Text.txt");  
-        try {  
-            file.createNewFile();  
-        } catch (IOException e1) {  
-            e1.printStackTrace();  
-        }  
+
   
-        String str = massage.getText();  
-        byte bt[] = new byte[1024];  
-        bt = str.getBytes();  
-        try {  
-            FileOutputStream in = new FileOutputStream(file);  
-            try {  
-                in.write(bt, 0, bt.length);  
-                in.close();  
-            } catch (IOException e1) {  
-                e1.printStackTrace();  
-            }  
-        } catch (FileNotFoundException e1) {  
-            e1.printStackTrace();  
-        }  
-        try {  
-            FileInputStream out = new FileInputStream(file);  
-            InputStreamReader isr = new InputStreamReader(out);  
-            int ch = 0;  
-            while ((ch = isr.read()) != -1) {  
-                System.out.print((char) ch);  
-            }  
-        } catch (Exception e1) {  
-        }  
-    }  
-
-
-
-
-
-
 
 运行截图：
 
-
-
-
-
-
-
-
-
-
-
-## 实验心得
+## 四、实验心得
   本学期我们进行了五次Java 实验，经过这五次实验，我深切体会到投身实践的重要性。在本次实验中综合性的归纳了以往学过的知识点，整合已学知识编写本次实验程序。通过本次实验，我系统的再次了解和应用gui框体、事件监听、异常处理、文件保存与读取的逻辑编程。在本次实验的过程中，我认识到自己在实践中的不足，缺乏相应的知识与经验，对所学专业知识不能够很好的应用。所以在同班同学们的帮助下，熟悉并完成了代码编写，同时让我对程序设计有了成就感与兴趣感。希望通过这段时间的学习，能给以后的工作奠定坚持的基础。
