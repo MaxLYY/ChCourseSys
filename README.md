@@ -1,5 +1,5 @@
-班级：计G191
-姓名 : 李媛媛
+班级：计G191 
+姓名 : 李媛媛 
 学号：2019322026  
 # JAVA实验报告五--学生选课系统  
 ## 实验目的:  
@@ -15,12 +15,12 @@
 ## 实验过程  
 1.在选课系统的基础上添加GUI窗体
 2.实现选课退课数据的基本文件输出和输入
-实验流程图：
+### 实验流程图：
 
 
 
 
-核心代码：
+### 核心代码：
   public void actionPerformed(ActionEvent e) {
                 StringBuilder info=new StringBuilder();
                 String name=jtfName.getText();
